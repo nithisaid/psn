@@ -66,29 +66,40 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
+
+
             @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
+            <div class="top-right links">
+                @auth
+                    <a href="{{ route('logout') }}">Logout</a>
+                @else
+                    <a href="{{ route('login') }}">Login/Signup</a>
+                @endauth
+            </div>
+             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+       
+                <?php
+//   use Jumbojett\OpenIDConnectClient;
+//   https://manage.auth0.com/#/applications/qgLLEdEX7t1ob9vFCfokLx2Dz2D0g8sw/quickstart
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+//   $oidc = new OpenIDConnectClient(
+//   'https://ohm.auth0.com', // idp issuer
+//   'mPpr3rlx2tnAVM3eLnvQshxzxRvKpn9g', // client id
+//   'A_QN3eZ4aVW007R0DreCQh4T3eTItN_gL24o3s0ms-fuO2_NA3suxrwIhOXlawzZ'); //client secret
+// $oidc->providerConfigParam(array(
+//   'token_endpoint'=>'https://ohm.auth0.com/oauth/token',
+//   'jwks_uri'=>'https://ohm.auth0.com/.well-known/jwks.json',
+//   'response_type'=>'code',
+// ));
+// $oidc->setRedirectURL("http://psn.host");
+// $oidc->addScope(array('openid')); 
+// $oidc->authenticate();
+// $sub = $oidc->getVerifiedClaims();
+// print_r($sub);
+                ?>
+               
             </div>
         </div>
     </body>
