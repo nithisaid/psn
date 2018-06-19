@@ -67,7 +67,6 @@
     <body>
         <div class="flex-center position-ref full-height">
 
-
             @if (Route::has('login'))
             <div class="top-right links">
                 @auth
@@ -79,7 +78,7 @@
              @endif
 
             <div class="content">
-       
+       sss
                 <?php
 //   use Jumbojett\OpenIDConnectClient;
 //   https://manage.auth0.com/#/applications/qgLLEdEX7t1ob9vFCfokLx2Dz2D0g8sw/quickstart
